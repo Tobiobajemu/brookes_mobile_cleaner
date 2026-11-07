@@ -1,0 +1,25 @@
+name: brookes_mobile_cleaner
+description: "A photo & video swiper clean-up app for Brooke."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  photo_manager: ^3.0.0
+  photo_manager_image_provider: ^2.2.0
+  flutter_card_swiper: ^7.0.0
+  video_player: ^2.8.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
