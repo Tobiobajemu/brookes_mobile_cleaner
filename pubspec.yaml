@@ -1,33 +1,20 @@
-name: Build iOS Simulator App
+name: brookes_mobile_cleaner
+description: A new Flutter project.
+publish_to: 'none'
 
-on:
-  push:
-    branches: [ main ]
+environment:
+  sdk: '>=3.3.0 <4.0.0'
 
-jobs:
-  build-ios:
-    runs-on: macos-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+dependencies:
+  flutter:
+    sdk: flutter
+  photo_manager: ^3.0.0
+  photo_manager_image_provider: ^2.2.0
 
-      - name: Set up Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '3.19.0'
-          channel: 'stable'
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
 
-      - name: Bypass Android Check
-        run: rm -rf android
-
-      - name: Install dependencies
-        run: flutter pub get
-
-      - name: Build iOS Simulator App
-        run: flutter build ios --simulator
-
-      - name: Upload Build Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: ios-simulator-build
-          path: build/ios/iphonesimulator/
+flutter:
+  uses-material-design: true
