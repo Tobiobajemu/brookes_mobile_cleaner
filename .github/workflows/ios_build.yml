@@ -20,13 +20,13 @@ jobs:
       - name: Bypass Android Check
         run: rm -rf android
 
+      - name: Disable buggy Swift Package Manager
+        run: flutter config --no-enable-swift-package-manager
+
       - name: Install dependencies
         run: |
           flutter clean
           flutter pub get
-
-      - name: Generate iOS Plugin Files
-        run: flutter build ios --config-only
 
       - name: Build iOS Simulator App
         run: flutter build ios --simulator
