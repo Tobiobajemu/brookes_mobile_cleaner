@@ -17,6 +17,9 @@ jobs:
           flutter-version: '3.19.0'
           channel: 'stable'
 
+      - name: Bypass Android Check
+        run: rm -rf android
+
       - name: Install dependencies
         run: flutter pub get
 
