@@ -21,7 +21,12 @@ jobs:
         run: rm -rf android
 
       - name: Install dependencies
-        run: flutter pub get
+        run: |
+          flutter clean
+          flutter pub get
+
+      - name: Generate iOS Plugin Files
+        run: flutter build ios --config-only
 
       - name: Build iOS Simulator App
         run: flutter build ios --simulator
