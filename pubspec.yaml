@@ -1,5 +1,5 @@
 name: brookes_mobile_cleaner
-description: A new Flutter project.
+description: A photo and video swiping clean-up app.
 publish_to: 'none'
 
 environment:
@@ -10,6 +10,8 @@ dependencies:
     sdk: flutter
   photo_manager: ^3.0.0
   photo_manager_image_provider: ^2.2.0
+  flutter_card_swiper: ^7.0.0
+  video_player: ^2.8.0
 
 dev_dependencies:
   flutter_test:
